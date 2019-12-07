@@ -1,12 +1,12 @@
 @media screen and (max-width: 760px) {
 
     html{
-        background: url(../IMG/De_dust2_new_v4.jpg) top;
+        background: url(../IMG/De_dust2_new_v4.jpg) top fill;
     }
 
     header{
         margin-top:2px ;
-        height: 19vh;
+        height: 15vh;
         /* background: linear-gradient(.25turn, #803ca1 20%, #68a3e5 20%, #68a3e5 40%, #109856 40%, #109856 60%, #eda338 60%, #eda338 80%, #e6f13d 80%); */
         /* background: linear-gradient(grey, lightgrey 37%, white , lightgrey 75%, grey); */
         /* background: linear-gradient(white, lightgrey 37%, grey , lightgrey 75%, white); */
