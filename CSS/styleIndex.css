@@ -8,48 +8,72 @@
     font-family: drive, sans-serif;
 }
 html{
-    background-color:black;
+    background-color:white;
+    overflow: hidden;
+    background: url(../IMG/De_dust2_new_v4.jpg);
 }
 
 header{
     height: 18vh;
-    background-color: white;
+    /* background: linear-gradient(.25turn, #803ca1 20%, #68a3e5 20%, #68a3e5 40%, #109856 40%, #109856 60%, #eda338 60%, #eda338 80%, #e6f13d 80%); */
+    /* background: linear-gradient(grey, lightgrey 37%, white , lightgrey 75%, grey); */
+    /* background: linear-gradient(white, lightgrey 37%, grey , lightgrey 75%, white); */
     text-align: center;
+    width:100%;
+    padding-top:8px;
 }
+body{
+    margin:0;
+}
+
+article{
+    
+}
+
 .strips {
    
-    height: 80vh;
+    height: 83vh;
     text-align: center;
-    overflow: hidden;
     color: white;
+    opacity: .85;
+    
 }
+
+.section:after {
+    content: "";
+    display: table; 
+    clear: both; 
+  }
+
 .strips__strip {
     will-change: width, left, z-index, height;
     position: absolute;
-    width: 20%;
-    height: 80vh;
+    width: 19%;
+    height: 82vh;
     overflow: hidden;
     cursor: pointer;
+    border-radius: 30px;
+    
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .strips__strip:nth-child(1) {
-    left: 0;
+    left: .5vw;
 }
 .strips__strip:nth-child(2) {
-    left: 20vw;
+    left: 20.5vw;
 }
 .strips__strip:nth-child(3) {
-    left: 40vw;
+    left: 40.5vw;
 }
 .strips__strip:nth-child(4) {
-    left: 60vw;
+    left: 60.5vw;
 }
 .strips__strip:nth-child(5) {
-    left: 80vw;
+    left: 80.5vw;
 }
 .strips__strip:nth-child(1) .strip__content {
     background: #803ca1;
-    transform: translate3d(-100%, 0, 0);
+    transform: translate3d(0, -100%, 0);
     animation-name: strip1;
     animation-delay: 0.1s;
 }
@@ -73,40 +97,11 @@ header{
 }
 .strips__strip:nth-child(5) .strip__content {
     background: #e6f13d;
-    transform: translate3d(100%, 0, 0);
+    transform: translate3d(0, -100%, 0);
     animation-name: strip5;
     animation-delay: 0.5s;
 }
-@media screen and (max-width: 760px) {
-    .strips__strip {
-        min-height: 20vh;
-   }
-    .strips__strip:nth-child(1) {
-        top: 0;
-        left: 0;
-        width: 100%;
-   }
-    .strips__strip:nth-child(2) {
-        top: 20vh;
-        left: 0;
-        width: 100%;
-   }
-    .strips__strip:nth-child(3) {
-        top: 40vh;
-        left: 0;
-        width: 100%;
-   }
-    .strips__strip:nth-child(4) {
-        top: 60vh;
-        left: 0;
-        width: 100%;
-   }
-    .strips__strip:nth-child(5) {
-        top: 80vh;
-        left: 0;
-        width: 100%;
-   }
-}
+
 .strips .strip__content {
     animation-duration: 1s;
     animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
@@ -123,7 +118,7 @@ header{
 }
 .strips .strip__content:hover:before {
     transform: skew(-30deg) scale(3) translate(0, 0);
-    opacity: 0.1;
+    opacity: 0.0;
 }
 .strips .strip__content:before {
     content: "";
@@ -134,11 +129,12 @@ header{
     width: 100%;
     height: 100%;
     background: white;
-    opacity: 0.05;
+    opacity: 0.35;
     transform-origin: center center;
     transform: skew(-30deg) scaleY(1) translate(0, 0);
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
+
 .strips .strip__inner-text {
     will-change: transform, opacity;
     position: absolute;
@@ -150,6 +146,7 @@ header{
     opacity: 0;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
+
 .strips__strip--expanded {
     width: 100%;
     top: 0 !important;
@@ -157,11 +154,7 @@ header{
     z-index: 3;
     cursor: default;
 }
-@media screen and (max-width: 760px) {
-    .strips__strip--expanded {
-        min-height: 100vh;
-   }
-}
+
 .strips__strip--expanded .strip__content:hover:before {
     transform: skew(-30deg) scale(1) translate(0, 0);
     opacity: 0.05;
@@ -183,11 +176,7 @@ header{
     color: black;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
-@media screen and (max-width: 760px) {
-    .strip__title {
-        font-size: 28px;
-   }
-}
+
 .strip__close {
     position: absolute;
     right: 3vw;
@@ -203,7 +192,7 @@ header{
 }
 @keyframes strip1 {
     0% {
-        transform: translate3d(-100%, 0, 0);
+        transform: translate3d(0, -100%, 0);
    }
     100% {
         transform: translate3d(0, 0, 0);
@@ -235,7 +224,7 @@ header{
 }
 @keyframes strip5 {
     0% {
-        transform: translate3d(100%, 0, 0);
+        transform: translate3d(0, -100%, 0);
    }
     100% {
         transform: translate3d(0, 0, 0);

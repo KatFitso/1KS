@@ -1,0 +1,146 @@
+@media screen and (max-width: 760px) {
+
+    html{
+        background: url(../IMG/De_dust2_new_v4.jpg) top;
+    }
+
+    header{
+        margin-top:2px ;
+        height: 19vh;
+        /* background: linear-gradient(.25turn, #803ca1 20%, #68a3e5 20%, #68a3e5 40%, #109856 40%, #109856 60%, #eda338 60%, #eda338 80%, #e6f13d 80%); */
+        /* background: linear-gradient(grey, lightgrey 37%, white , lightgrey 75%, grey); */
+        /* background: linear-gradient(white, lightgrey 37%, grey , lightgrey 75%, white); */
+        text-align: center;
+        width:100%;
+        
+    }
+
+    .strips__strip {
+        height: 12.4vh;
+        border: black solid 2px;
+   }
+    .strips__strip:nth-child(1) {
+        top: 20vh;
+        left: 10%;
+        width: 80%;
+   }
+    .strips__strip:nth-child(2) {
+        top: 36.4vh;
+        left: 10%;
+        width: 80%;
+   }
+    .strips__strip:nth-child(3) {
+        top: 52.8vh;
+        left: 10%;
+        width: 80%;
+   }
+    .strips__strip:nth-child(4) {
+        top: 69.2vh;
+        left: 10%;
+        width: 80%;
+   }
+    .strips__strip:nth-child(5) {
+        top: 85.6vh;
+        left: 10%;
+        width: 80%;
+   }
+
+    .strips__strip:nth-child(1) .strip__content {
+        background: #803ca1;
+        transform: translate3d(100%, 0, 0);
+        animation-name: strip1;
+        animation-delay: 0.1s;
+    }
+    .strips__strip:nth-child(2) .strip__content {
+        background: #68a3e5;
+        transform: translate3d(100%, 0, 0);
+        animation-name: strip2;
+        animation-delay: 0.2s;
+    }
+    .strips__strip:nth-child(3) .strip__content {
+        background: #109856;
+        transform: translate3d(100%, 0, 0);
+        animation-name: strip3;
+        animation-delay: 0.3s;
+    }
+    .strips__strip:nth-child(4) .strip__content {
+        background: #eda338;
+        transform: translate3d(100%, 0, 0);
+        animation-name: strip4;
+        animation-delay: 0.4s;
+    }
+    .strips__strip:nth-child(5) .strip__content {
+        background: #e6f13d;
+        transform: translate3d(100%, 0, 0);
+        animation-name: strip5;
+        animation-delay: 0.5s;
+    }   
+
+    @keyframes strip1 {
+        0% {
+            transform: translate3d(100%, 0, 0);
+       }
+        100% {
+            transform: translate3d(0, 0, 0);
+       }
+    }
+    @keyframes strip2 {
+        0% {
+            transform: translate3d(100%, 0, 0);
+       }
+        100% {
+            transform: translate3d(0, 0, 0);
+       }
+    }
+    @keyframes strip3 {
+        0% {
+            transform: translate3d(100%, 0, 0);
+       }
+        100% {
+            transform: translate3d(0, 0, 0);
+       }
+    }
+    @keyframes strip4 {
+        0% {
+            transform: translate3d(100%, 0, 0);
+       }
+        100% {
+            transform: translate3d(0, 0, 0);
+       }
+    }
+    @keyframes strip5 {
+        0% {
+            transform: translate3d(100%, 0, 0);
+       }
+        100% {
+            transform: translate3d(0, 0, 0);
+       }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .strips__strip--expanded {
+        min-height: 100vh;
+   }
+
+   .strips .strip__content:before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        opacity: 0.35;
+        transform-origin: center center;
+        transform: skew(-30deg) scaleY(1.1) scaleX(.7) translate(0, 0);
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .strip__title {
+        font-size: 28px;
+   }
+}
